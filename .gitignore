@@ -31,4 +31,4 @@ target
 node_modules
 .idea
 bin
-.iml
+*.iml
