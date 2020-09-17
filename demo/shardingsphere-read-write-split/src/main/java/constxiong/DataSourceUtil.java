@@ -2,6 +2,9 @@ package constxiong;
 
 import com.zaxxer.hikari.HikariDataSource;
 
+/**
+ * 获取 DataSource 工具类，使用了 Hikari 数据库连接池
+ */
 import javax.sql.DataSource;
 
 public final class DataSourceUtil {
