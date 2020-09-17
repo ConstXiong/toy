@@ -11,6 +11,14 @@ public final class DataSourceUtil {
 
     private static final int PORT = 3306;
 
+    /**
+     * 通过 Hikari 数据库连接池创建 DataSource
+     * @param ip
+     * @param username
+     * @param password
+     * @param dataSourceName
+     * @return
+     */
     public static DataSource createDataSource(String ip, String username, String password, String dataSourceName) {
         HikariDataSource result = new HikariDataSource();
         result.setDriverClassName(com.mysql.jdbc.Driver.class.getName());
