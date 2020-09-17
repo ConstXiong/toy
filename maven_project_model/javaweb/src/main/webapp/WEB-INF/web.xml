@@ -4,12 +4,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 
-	<display-name>maven_javaweb_model</display-name>
-	
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath*:META-INF/spring/*.xml</param-value>
-	</context-param>
+	<display-name>javaweb</display-name>
 	
 	<!-- 配置session超时时间，单位分钟 -->
 	<session-config>
