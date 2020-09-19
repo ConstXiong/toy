@@ -10,16 +10,19 @@
     <artifactId>shardingsphere-read-write-split</artifactId>
 
     <dependencies>
+        <!-- 当前最新版 sharding-jdbc -->
         <dependency>
             <groupId>org.apache.shardingsphere</groupId>
             <artifactId>sharding-jdbc-core</artifactId>
             <version>4.1.1</version>
         </dependency>
+        <!-- 结合官方文档使用了 HikariCP 数据库连接池 -->
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <version>3.4.5</version>
         </dependency>
+        <!-- MySQL 8.0.21 驱动 -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

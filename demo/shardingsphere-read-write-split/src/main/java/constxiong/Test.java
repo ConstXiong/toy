@@ -16,7 +16,7 @@ import java.util.*;
  * 主库：172.31.32.184
  * 从库：172.31.32.234
  *
- * 观察通过 ShardingSphere 获取的 DataSource 是否会自动写入到主库，从库是否主动同步
+ * 观察通过 ShardingSphere 获取的 DataSource 是否会自动写入到主库，从库是否主动同步，从库同步数据的延迟时间
  */
 public class Test {
 
