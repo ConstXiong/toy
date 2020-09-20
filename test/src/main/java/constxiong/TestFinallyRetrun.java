@@ -22,7 +22,8 @@ public class TestFinallyRetrun {
         }
     }
 
-    public static String getFinallyReturnString() {
+    @SuppressWarnings("finally")
+	public static String getFinallyReturnString() {
         String str = "A";
         try {
             str = "B";
