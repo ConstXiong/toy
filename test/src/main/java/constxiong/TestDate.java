@@ -39,8 +39,8 @@ public class TestDate {
         System.out.println("获取日：" + date.getDayOfMonth());
         System.out.println("通过 TemporalField 接口的实现枚举类 ChronoField.DAY_OF_MONTH 获取日：" + date.get(ChronoField.DAY_OF_MONTH));
         System.out.println("获取周几：" + date.getDayOfWeek());
-        System.out.println("获取一个月多少天：" + date.lengthOfMonth());
-        System.out.println("获取是否为闰年：" + date.isLeapYear());
+        System.out.println("获取当前月多少天：" + date.lengthOfMonth());
+        System.out.println("获取当前年是否为闰年：" + date.isLeapYear());
 
         LocalTime nowTime = LocalTime.now();
         System.out.println("当前时间：" + nowTime);
@@ -64,25 +64,25 @@ public class TestDate {
         System.out.println("解析时间字符串：" + LocalTime.parse("01:02:03"));
         System.out.println("解析日期时间字符串：" + LocalDateTime.parse("2020-09-21T01:02:03", DateTimeFormatter.ISO_LOCAL_DATE_TIME));
         
-        //方便时间建模、机器处理的时间处理类 Instant,其实时间 1970-01-01 00:00:00
+        //方便时间建模、机器处理的时间处理类 Instant,起始时间 1970-01-01 00:00:00
         System.out.println("起始时间 + 3 秒：" + Instant.ofEpochSecond(3));
         System.out.println("起始时间 + 3 秒 + 100 万纳秒：" + Instant.ofEpochSecond(3, 1_000_000_000));
         System.out.println("起始时间 + 3 秒 - 100 万纳秒：" + Instant.ofEpochSecond(3, -1_000_000_000));
         System.out.println("距离 1970-01-01 00:00:00 毫秒数：" + Instant.now().toEpochMilli());
         
-        //LocalTime、LocalDateTime、Intant 的时间差处理 Duration
+        //Duration：LocalTime、LocalDateTime、Intant 的时间差处理
         System.out.println("时间差：" + Duration.between(LocalTime.parse("01:02:03"), LocalTime.parse("02:03:04")));
         System.out.println("时间差：" + Duration.between(LocalDateTime.parse("2020-09-21T01:02:03"), LocalDateTime.parse("2020-09-22T02:03:04")));
         System.out.println("时间差：" + Duration.between(Instant.ofEpochMilli(1600623455080L), Instant.now()));
         
-        //比较
+        //日期时间，前、后、相等比较
         System.out.println("2020-09-21 在 2020-09-18 前？" + LocalDate.parse("2020-09-21").isBefore(LocalDate.parse("2020-09-18")));
         System.out.println("01:02:03 在 02:03:04 后？" + LocalTime.parse("01:02:03").isAfter(LocalTime.parse("02:03:04")));
         
         //年月日差处理 Period
         System.out.println("日期相差：" + Period.between(LocalDate.of(2020, 9, 8), LocalDate.of(2020, 9, 21)));
         
-        //修改，返回日期、时间对象的副本
+        //修改日期、时间对象，返回副本
         System.out.println("修改日期返回副本：" + LocalDate.now().withYear(2019).withMonth(9).withDayOfMonth(9));
         LocalDate date4Cal = LocalDate.now();
         System.out.println("加一周：" + date4Cal.plusWeeks(1));
