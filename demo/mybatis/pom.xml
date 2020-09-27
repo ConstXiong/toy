@@ -17,6 +17,7 @@
             <version>8.0.21</version>
         </dependency>
 
+        <!-- MyBatis -->
         <dependency>
 		  <groupId>org.mybatis</groupId>
 		  <artifactId>mybatis</artifactId>

@@ -5,6 +5,9 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
+/**
+ * UserMapper 接口，映射对数据库的操作
+ */
 public interface UserMapper {
 
     public User selectUser(int id);
