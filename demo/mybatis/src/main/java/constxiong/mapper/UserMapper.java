@@ -10,10 +10,12 @@ import java.util.List;
  */
 public interface UserMapper {
 
-    public User selectUser(int id);
+    User selectUser(int id);
 
-    public int insertUser(User user);
+    int insertUser(User user);
 
     @Select("select * from user")
-    public List<User>  selectAllUsers();
+    List<User>  selectAllUsers();
+
+    User selectUserByResultMap(int id);
 }

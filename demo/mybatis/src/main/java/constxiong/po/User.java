@@ -8,6 +8,8 @@ public class User {
 
     private String name;
 
+    private String mc;
+
     public User(Integer id, String name) {
         this.id = id;
         this.name = name;
@@ -29,11 +31,20 @@ public class User {
         this.name = name;
     }
 
+    public String getMc() {
+        return mc;
+    }
+
+    public void setMc(String mc) {
+        this.mc = mc;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", mc='" + mc + '\'' +
                 '}';
     }
 }

@@ -12,4 +12,13 @@
         insert into user values(#{id}, #{name})
     </insert>
 
+    <select id="selectUserByResultMap" resultMap="userMap" parameterType="constxiong.po.User">
+        select * from user where id = #{id}
+    </select>
+
+    <resultMap id="userMap" type="constxiong.po.User">
+        <id property="id" column="id" />
+        <result property="mc" column="name"/>
+    </resultMap>
+
 </mapper>

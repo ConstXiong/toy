@@ -40,9 +40,15 @@ public class Test {
 
         //插入 user
         userMapper.insertUser(new User(1, "ConstXiong1"));
+
         //查询该 user
         User user = userMapper.selectUser(1);
         System.out.println(user);
+
+        //使用 resultMap 查询 user
+        user = userMapper.selectUserByResultMap(1);
+        System.out.println(user);
+
         //查询所有 user 数据
         List<User> users = userMapper.selectAllUsers();
         System.out.println(users);
@@ -75,9 +81,15 @@ public class Test {
 
         //插入 user
         userMapper.insertUser(new User(2, "ConstXiong2"));
+
         //查询该 user
         User user = userMapper.selectUser(2);
         System.out.println(user);
+
+        //使用 resultMap 查询 user
+        user = userMapper.selectUserByResultMap(1);
+        System.out.println(user);
+
         //查询所有 user 数据
         List<User> users = userMapper.selectAllUsers();
         System.out.println(users);
