@@ -7,6 +7,10 @@
 	<packaging>pom</packaging>
  	<modules>
 		<module>shardingsphere-read-write-split</module>
+		<module>shardingsphere-sharding</module>
+		<module>mybatis-pageHelper</module>
+		<module>mybatis-batchinsert</module>
+		<module>mybatis</module>
 	</modules>
 	
 	<properties>  
