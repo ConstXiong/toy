@@ -15,4 +15,8 @@ public interface UserMapper {
 
     int deleteUsers();
 
+    /**
+     * 批量插入
+     */
+    int insertUserBatch(List<User> userList);
 }

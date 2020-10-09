@@ -6,11 +6,6 @@
     <settings>
         <setting name="logImpl" value="STDOUT_LOGGING"></setting>
     </settings>
-    <plugins>
-        <plugin interceptor="com.github.pagehelper.PageInterceptor">
-            <property name="helperDialect" value="mysql"/>
-        </plugin>
-    </plugins>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
