@@ -1,17 +1,15 @@
 package constxiong;
 
-import constxiong.mapper.UserMapper;
-import constxiong.po.User;
+import java.io.IOException;
+import java.io.InputStream;
+
 import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.ExecutorType;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
+import constxiong.mapper.UserMapper;
+import constxiong.po.User;
 
 /**
  * 测试 Mybatis 获取自增主键
