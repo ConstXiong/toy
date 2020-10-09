@@ -15,7 +15,9 @@ import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 测试 Mybatis xml 与 注解的使用
@@ -24,7 +26,7 @@ public class Test {
 
     public static void main(String[] args) throws IOException {
         testXmlConfig();
-        testJavaConfig();
+//        testJavaConfig();
     }
 
     /**
@@ -39,7 +41,7 @@ public class Test {
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);//通过 SqlSession 获取 Mapper 接口
 
         //插入 user
-        userMapper.insertUser(new User(1, "ConstXiong1"));
+        userMapper.insertUser(new User(null, "ConstXiong1"));
 
         //查询该 user
         User user = userMapper.selectUser(1);
@@ -52,6 +54,25 @@ public class Test {
         //查询所有 user 数据
         List<User> users = userMapper.selectAllUsers();
         System.out.println(users);
+
+        System.out.println("------ selectUserByParamIndex ------");
+        user = userMapper.selectUserByParamIndex(31, "ConstXiong1");
+        System.out.println(user);
+
+        System.out.println("------ selectUserByAnnotation ------");
+        user = userMapper.selectUserByAnnotation(31, "ConstXiong1");
+        System.out.println(user);
+
+        System.out.println("------ selectUserByPo ------");
+        user = userMapper.selectUserByPo(new User(31, "ConstXiong1"));
+        System.out.println(user);
+
+        System.out.println("------ selectUserByMap ------");
+        Map<String, Object> param = new HashMap<>();
+        param.put("id", 31);
+        param.put("name", "ConstXiong1");
+        user = userMapper.selectUserByMap(param);
+        System.out.println(user);
 
         //关闭 SqlSession
         sqlSession.close();

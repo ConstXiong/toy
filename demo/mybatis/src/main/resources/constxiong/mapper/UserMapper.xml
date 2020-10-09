@@ -21,4 +21,20 @@
         <result property="mc" column="name"/>
     </resultMap>
 
+    <select id="selectUserByParamIndex" resultType="constxiong.po.User">
+        select * from user where id = #{arg0} and name = #{arg1}
+    </select>
+
+    <select id="selectUserByAnnotation" resultType="constxiong.po.User">
+        select * from user where id = #{id} and name = #{name}
+    </select>
+
+    <select id="selectUserByPo" resultType="constxiong.po.User" parameterType="constxiong.po.User">
+        select * from user where id = #{id} and name = #{name}
+    </select>
+
+    <select id="selectUserByMap" resultType="constxiong.po.User">
+        select * from user where id = #{id} and name = #{name}
+    </select>
+
 </mapper>
