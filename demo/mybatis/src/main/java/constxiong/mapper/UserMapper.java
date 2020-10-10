@@ -29,4 +29,8 @@ public interface UserMapper {
 
     User selectUserByMap(Map<String, Object> map);
 
+    User selectUserWithInfo();
+
+    User selectUserWithArticles();
+
 }

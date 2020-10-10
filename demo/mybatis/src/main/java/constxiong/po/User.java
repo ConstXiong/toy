@@ -1,5 +1,7 @@
 package constxiong.po;
 
+import java.util.List;
+
 /**
  * 用户表模型
  */
@@ -9,6 +11,13 @@ public class User {
     private String name;
 
     private String mc;
+
+    private Info info;
+
+    private List<Article> articles;
+
+    public User() {
+    }
 
     public User(Integer id, String name) {
         this.id = id;
@@ -39,12 +48,30 @@ public class User {
         this.mc = mc;
     }
 
+    public Info getInfo() {
+        return info;
+    }
+
+    public void setInfo(Info info) {
+        this.info = info;
+    }
+
+    public List<Article> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<Article> articles) {
+        this.articles = articles;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", mc='" + mc + '\'' +
+                ", info=" + info +
+                ", articles=" + articles +
                 '}';
     }
 }

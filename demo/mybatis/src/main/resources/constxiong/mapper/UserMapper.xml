@@ -36,5 +36,31 @@
     <select id="selectUserByMap" resultType="constxiong.po.User">
         select * from user where id = #{id} and name = #{name}
     </select>
+    
+    <select id="selectUserWithInfo" resultMap="UserWithInfo">
+        select user.id, user.name, info.user_id, info.name as info_name from user,info where user.id = info.user_id
+    </select>
+
+    <select id="selectUserWithArticles" resultMap="UserWithArticles">
+        select user.id, user.name, article.user_id, article.title from user,article where user.id = article.user_id
+    </select>
+
+    <resultMap id="UserWithInfo" type="constxiong.po.User">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <association property="info" javaType="constxiong.po.Info">
+            <id property="userId" column="user_id"/>
+            <result property="name" column="info_name"/>
+        </association>
+    </resultMap>
+
+    <resultMap id="UserWithArticles" type="constxiong.po.User">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <collection property="articles" ofType="constxiong.po.Article">
+            <id property="userId" column="user_id"/>
+            <result property="title" column="title"/>
+        </collection>
+    </resultMap>
 
 </mapper>

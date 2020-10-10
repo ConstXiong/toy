@@ -74,6 +74,14 @@ public class Test {
         user = userMapper.selectUserByMap(param);
         System.out.println(user);
 
+        System.out.println("------ selectUserWithInfo ------");
+        user = userMapper.selectUserWithInfo();
+        System.out.println(user);
+
+        System.out.println("------ selectUserWithArticles ------");
+        user = userMapper.selectUserWithArticles();
+        System.out.println(user);
+
         //关闭 SqlSession
         sqlSession.close();
     }
