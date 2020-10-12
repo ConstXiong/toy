@@ -58,7 +58,8 @@
         <id property="id" column="id"/>
         <result property="name" column="name"/>
         <collection property="articles" ofType="constxiong.po.Article">
-            <id property="userId" column="user_id"/>
+            <!--<id property="userId" column="user_id"/>-->
+            <result property="userId" column="user_id"/>
             <result property="title" column="title"/>
         </collection>
     </resultMap>
