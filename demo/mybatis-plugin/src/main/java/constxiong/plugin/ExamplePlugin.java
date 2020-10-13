@@ -1,5 +1,8 @@
 package constxiong.plugin;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.plugin.Interceptor;
@@ -8,9 +11,6 @@ import org.apache.ibatis.plugin.Invocation;
 import org.apache.ibatis.plugin.Signature;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
-
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * MyBatis 插件
