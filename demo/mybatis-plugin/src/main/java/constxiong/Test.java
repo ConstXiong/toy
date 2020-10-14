@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.util.List;
 
 /**
- * 测试 Mybatis 懒加载
+ * 测试 Mybatis 插件
  */
 public class Test {
 
