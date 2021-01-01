@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
  	<modules>
-		<module>spring-dependency-lookup</module>
+		<module>001-spring-dependency-lookup</module>
 	</modules>
 	
 	<properties>  

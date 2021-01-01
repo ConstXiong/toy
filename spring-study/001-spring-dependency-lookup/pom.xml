@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 	
-    <artifactId>spring-dependency-lookup</artifactId>
+    <artifactId>001-spring-dependency-lookup</artifactId>
 
     <properties>
         <spring-version>5.2.2.RELEASE</spring-version>
