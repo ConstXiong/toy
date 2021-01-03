@@ -1,20 +1,21 @@
 package constxiong;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 
-import java.util.Map;
-
 /**
  * 依赖查找
  */
+@SuppressWarnings("deprecation")
 public class Test {
 
     public static void main(String[] args) {
-        BeanFactory factory = new XmlBeanFactory(new ClassPathResource("META-INF/spring-dependency-lookup.xml"));
+		BeanFactory factory = new XmlBeanFactory(new ClassPathResource("META-INF/spring-dependency-lookup.xml"));
         findByName(factory);
         findPrimaryByType(factory);
         findAllByType(factory);
@@ -32,7 +33,7 @@ public class Test {
     }
 
     /**
-     * 根据类型查找 priary
+     * 根据类型查找 primary
      */
     private static void findPrimaryByType(BeanFactory factory) {
         //根据类型查找如何存在多个同一类型的bean，需要制定 primary 属性为 true
@@ -58,12 +59,12 @@ public class Test {
     }
 
     /**
-     * 根据注解加载查找
+     * 根据注解查找
      */
     private static void findByAnnotation(BeanFactory factory) {
-        //ListableBeanFactory，具有根据注解查询 bean 的能力
+        //ListableBeanFactory，具有根据注解查找 bean 的能力
         Map<String, Object> beans = ((ListableBeanFactory) factory).getBeansWithAnnotation(ConstXiong.class);
-        System.out.println("根据注解加载查找: " + beans);
+        System.out.println("根据注解查找: " + beans);
     }
 
     /**
