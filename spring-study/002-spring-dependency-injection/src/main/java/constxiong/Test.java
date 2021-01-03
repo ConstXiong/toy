@@ -1,5 +1,6 @@
 package constxiong;
 
+import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -19,8 +20,13 @@ public class Test {
 		System.out.println(constxiong.getObjectFacotory().getObject() == factory);
 		
 		System.out.println(constxiong.getBeanFactory());
-		BeanFactory beanFactory = (BeanFactory)factory.getBean(BeanFactory.class);
-		System.out.println(beanFactory);
+		BeanFactory beanFactory = null;
+		try {
+			beanFactory = (BeanFactory)factory.getBean(BeanFactory.class);
+		} catch (BeansException e) {
+//			e.printStackTrace();
+		}
+		System.out.println(beanFactory == null);
     }
 
 }
