@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="wife" class="constxiong.datatype.User">
+		<property name="id" value="2"/>
+		<property name="name" value="wife"/>
+	</bean>
+
+	<bean id="ConstXiong" class="constxiong.datatype.User">
+		<property name="id" value="1"/>
+		<property name="name" value="ConstXiong"/>
+		<property name="wife" ref="wife"/>
+		<property name="friends">
+			<list>
+				<ref bean="wife"/>
+			</list>
+		</property>
+		<property name="schoolmates">
+			<list>
+				<ref bean="wife"/>
+			</list>
+		</property>
+		<property name="favorites">
+			<set>
+				<value>写代码</value>
+				<value>睡觉</value>
+		    </set>
+		</property>
+		<property name="emails">
+			<map>
+				<entry key="公司" value="123@123.com"></entry>
+				<entry key="个人" value="123@abc.com"></entry>
+		    </map>
+		</property>
+	</bean>
+	
+	<bean id="specialUser" class="constxiong.datatype.SpecialUser" autowire="byType">
+	</bean>
+
+</beans>
