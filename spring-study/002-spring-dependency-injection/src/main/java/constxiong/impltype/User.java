@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 public class User implements ApplicationContextAware {
-
+	
     //构造方法注入
     private Integer id;
     public User(Integer id) {
