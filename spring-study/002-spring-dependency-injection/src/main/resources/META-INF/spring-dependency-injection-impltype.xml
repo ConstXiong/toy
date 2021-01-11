@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="ConstXiong" class="constxiong.impltype.User">
+        <constructor-arg>
+            <value>1</value>
+        </constructor-arg>
+        <property name="name" value="ConstXiong"/>
+    </bean>
+
+    <bean id="favorites" class="java.lang.String">
+        <constructor-arg>
+            <value>写代码、睡觉</value>
+        </constructor-arg>
+    </bean>
+
+    <!-- 开启注解能力 -->
+    <context:component-scan base-package="constxiong"/>
+
+</beans>
