@@ -9,6 +9,7 @@
 		<module>001-spring-dependency-lookup</module>
 		<module>002-spring-dependency-injection</module>
 		<module>003-spring-beanfactory-applicationcontext</module>
+		<module>004-spring-beanfactory-factorybean</module>
 	</modules>
 	
 	<properties>  
