@@ -26,6 +26,10 @@ public class Test {
 		
 		user = beanFactory.getBean("customUser", User.class);
 		System.out.println(user);
+		
+		// 获取 UserFactoryBean 本身
+		UserFactoryBean userFactoryBean = beanFactory.getBean("&customUser", UserFactoryBean.class);
+		System.out.println(userFactoryBean);
 	}
 
 }
