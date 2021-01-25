@@ -11,6 +11,7 @@
 		<module>003-spring-beanfactory-applicationcontext</module>
 		<module>004-spring-beanfactory-factorybean</module>
 		<module>005-spring-beandefinition</module>
+		<module>006-spring-bean-register</module>
 	</modules>
 	
 	<properties>  
