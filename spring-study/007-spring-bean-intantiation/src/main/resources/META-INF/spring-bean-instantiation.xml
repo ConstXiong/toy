@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 构造方法 -->
+    <bean id="user1" class="constxiong.User">
+    	<constructor-arg name="id" value="1"></constructor-arg>
+    	<constructor-arg name="name" value="constructor"></constructor-arg>
+    </bean>
+    
+    <!-- 静态工厂方法 -->
+    <bean id="user3" class="constxiong.User" factory-method="getUser"></bean>
+    
+    <!-- bean 工厂方法 -->
+    <bean id="user2" factory-bean="userFactory" factory-method="getUser"></bean>
+    <bean id="userFactory" class="constxiong.UserFactory"></bean>
+    
+    <!-- FactoryBean -->
+    <bean id="user4" class="constxiong.UserFactoryBean"></bean>
+    
+    <!-- ServiceLoader -->
+    <bean id="userFactoryServiceLoader" class="org.springframework.beans.factory.serviceloader.ServiceLoaderFactoryBean">
+        <property name="serviceType" value="constxiong.UserFactoryInterface" />
+    </bean>
+
+</beans>
