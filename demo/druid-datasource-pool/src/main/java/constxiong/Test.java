@@ -6,6 +6,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+/**
+ * 测试 druid 数据库连接池
+ */
 public class Test {
 
     public static void main(String[] args) throws Exception {

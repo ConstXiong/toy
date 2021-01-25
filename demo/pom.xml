@@ -11,6 +11,13 @@
 		<module>mybatis-pageHelper</module>
 		<module>mybatis-batchinsert</module>
 		<module>mybatis</module>
+		<module>druid-datasource-pool</module>
+		<module>jodconverter</module>
+		<module>mybatis-autoincrement</module>
+		<module>mybatis-lazyload</module>
+		<module>mybatis-plugin</module>
+		<module>mybatis-spring</module>
+		<module>java8-stream</module>
 	</modules>
 	
 	<properties>  
