@@ -13,6 +13,7 @@
 		<module>005-spring-beandefinition</module>
 		<module>006-spring-bean-register</module>
 		<module>007-spring-bean-intantiation</module>
+		<module>008-spring-bean-intitialization</module>
 	</modules>
 	
 	<properties>  
