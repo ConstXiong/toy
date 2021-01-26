@@ -14,6 +14,7 @@
 		<module>006-spring-bean-register</module>
 		<module>007-spring-bean-intantiation</module>
 		<module>008-spring-bean-intitialization</module>
+		<module>009-spring-bean-destroy</module>
 	</modules>
 	
 	<properties>  
