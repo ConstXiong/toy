@@ -15,6 +15,9 @@
 		<module>007-spring-bean-intantiation</module>
 		<module>008-spring-bean-intitialization</module>
 		<module>009-spring-bean-destroy</module>
+		<module>010-spring-bean-lazy-init</module>
+		<module>011-spring-bean-gc</module>
+		<module>012-spring-annotated-context</module>
 	</modules>
 	
 	<properties>  
