@@ -1,10 +1,13 @@
 package constxiong;
 
+import java.util.Arrays;
 import java.util.Map;
 
 import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
+import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 
@@ -15,16 +18,18 @@ import org.springframework.core.io.ClassPathResource;
 public class Test {
 
     public static void main(String[] args) {
-		BeanFactory factory = new XmlBeanFactory(new ClassPathResource("META-INF/spring-dependency-lookup.xml"));
+    	XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("META-INF/spring-dependency-lookup.xml"));
         findByName(factory);
         findPrimaryByType(factory);
         findAllByType(factory);
         findByNameAndType(factory);
         findByAnnotation(factory);
         findInLazy(factory);
+        findWithObjectProvider(factory);
+        findBeanNames(factory);
     }
 
-    /**
+	/**
      * 根据名称查找
      */
     public static void findByName(BeanFactory factory) {
@@ -44,10 +49,12 @@ public class Test {
     /**
      * 根据类型查找所有
      */
-    private static void findAllByType(BeanFactory factory) {
+    private static void findAllByType(ListableBeanFactory factory) {
         //ListableBeanFactory，具有查询所有类型的能力
-        Map<String, User> beans = ((ListableBeanFactory) factory).getBeansOfType(User.class);
+        Map<String, User> beans = (factory).getBeansOfType(User.class);
         System.out.println("根据类型查找所有: " + beans);
+//        System.out.println(BeanFactoryUtils.beanOfType((ListableBeanFactory)factory, User.class));
+        System.out.println(BeanFactoryUtils.beansOfTypeIncludingAncestors(factory, User.class));
     }
 
     /**
@@ -61,9 +68,9 @@ public class Test {
     /**
      * 根据注解查找
      */
-    private static void findByAnnotation(BeanFactory factory) {
+    private static void findByAnnotation(ListableBeanFactory factory) {
         //ListableBeanFactory，具有根据注解查找 bean 的能力
-        Map<String, Object> beans = ((ListableBeanFactory) factory).getBeansWithAnnotation(ConstXiong.class);
+        Map<String, Object> beans = (factory).getBeansWithAnnotation(ConstXiong.class);
         System.out.println("根据注解查找: " + beans);
     }
 
@@ -75,5 +82,23 @@ public class Test {
         User user = objectFactory.getObject();
         System.out.println("延迟查找: " + user);
     }
+    
+    /**
+     * 使用 getBeanProvider 查找
+     */
+    private static void findWithObjectProvider(BeanFactory factory) {
+    	ObjectProvider<User> beanProvider = factory.getBeanProvider(User.class);
+    	User user = beanProvider.getIfAvailable(() -> new User());
+    	System.out.println("bean provider: " + user);
+    }
+    
+    /**
+     * 查找 bean 名称
+     */
+    private static void findBeanNames(ListableBeanFactory factory) {
+		System.out.println(Arrays.asList((factory).getBeanNamesForType(User.class)));
+		System.out.println(Arrays.asList((factory).getBeanNamesForAnnotation(ConstXiong.class)));
+		System.out.println(Arrays.asList(BeanFactoryUtils.beanNamesForAnnotationIncludingAncestors(factory, ConstXiong.class)));
+	}
 
 }
