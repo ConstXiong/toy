@@ -20,6 +20,7 @@
 		<module>012-spring-annotated-context</module>
 		<module>013-spring-bean-name-generator</module>
 		<module>014-spring-bean-name-alias</module>
+		<module>015-spring-inner-bean</module>
 	</modules>
 	
 	<properties>  
