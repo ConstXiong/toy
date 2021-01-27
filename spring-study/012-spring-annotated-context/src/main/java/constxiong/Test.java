@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 测试 Bean gc
+ * 测试 Bean 支持注解配置的 ApplicationContext
  * @author ConstXiong
  */
 public class Test {

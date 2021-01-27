@@ -18,6 +18,7 @@
 		<module>010-spring-bean-lazy-init</module>
 		<module>011-spring-bean-gc</module>
 		<module>012-spring-annotated-context</module>
+		<module>013-spring-bean-name-generator</module>
 	</modules>
 	
 	<properties>  
