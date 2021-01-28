@@ -21,6 +21,7 @@
 		<module>013-spring-bean-name-generator</module>
 		<module>014-spring-bean-name-alias</module>
 		<module>015-spring-inner-bean</module>
+		<module>016-spring-bean-exception</module>
 	</modules>
 	
 	<properties>  
