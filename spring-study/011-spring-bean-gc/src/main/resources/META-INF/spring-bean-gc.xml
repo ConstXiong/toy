@@ -9,4 +9,8 @@
         <property name="name" value="constxiong"/>
     </bean>
 
+    <bean id="user2" class="constxiong.User">
+        <constructor-arg name="id" value="2"></constructor-arg>
+    </bean>
+
 </beans>

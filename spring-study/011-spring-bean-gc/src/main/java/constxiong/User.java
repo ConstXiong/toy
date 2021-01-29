@@ -4,7 +4,7 @@ public class User {
 
 	@Override
 	protected void finalize() throws Throwable {
-		System.out.println("我要被 gc 回收了");
+		System.out.printf("我(id:%d)要被 gc 回收了\n", id);
 		super.finalize();
 	}
 
