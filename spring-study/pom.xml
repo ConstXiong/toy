@@ -22,6 +22,7 @@
 		<module>014-spring-bean-name-alias</module>
 		<module>015-spring-inner-bean</module>
 		<module>016-spring-bean-exception</module>
+		<module>017-spring-interface-callback-inject</module>
 	</modules>
 	
 	<properties>  
