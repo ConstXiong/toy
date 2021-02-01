@@ -15,18 +15,23 @@ public class Test {
 	
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring-bean-instantiation.xml");
+		//bean 的构造方法
 		User user1 = context.getBean("user1", User.class);
 		System.out.println(user1);
 		
+		// bean 工厂
 		User user2 = context.getBean("user2", User.class);
 		System.out.println(user2);
 		
+		// 静态工厂
 		User user3 = context.getBean("user3", User.class);
 		System.out.println(user3);
 		
+		// FactoryBean 的方式创建 bean
 		User user4 = context.getBean("user4", User.class);
 		System.out.println(user4);
 		
+		// AutowireCapableBeanFactory#createBean
 		User user5 = (User) context.getBeanFactory().createBean(User.class, AutowireCapableBeanFactory.AUTOWIRE_NO, false);
 		System.out.println(user5);
 		
