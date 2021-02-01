@@ -35,7 +35,7 @@ public class Test {
 		User user5 = (User) context.getBeanFactory().createBean(User.class, AutowireCapableBeanFactory.AUTOWIRE_NO, false);
 		System.out.println(user5);
 		
-		// BeanDefinition
+		// BeanDefinitionRegistry#registerBeanDefinition
 		((DefaultListableBeanFactory)context.getBeanFactory()).registerBeanDefinition("user6", BeanDefinitionBuilder.rootBeanDefinition(User.class).addPropertyValue("name", "BeanDefinition").getBeanDefinition());
 		System.out.println(context.getBean("user6", User.class));
 		
