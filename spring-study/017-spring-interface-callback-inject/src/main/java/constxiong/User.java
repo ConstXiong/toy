@@ -46,15 +46,15 @@ public class User implements
     public String toString() {
         return "User{" +
                 "beanFactory=" + beanFactory + '\n' +
-                ", applicationContext=" + applicationContext + '\n' +
-                ", environment=" + environment + '\n' +
-                ", resourceLoader=" + resourceLoader + '\n' +
-                ", beanClassLoader=" + beanClassLoader + '\n' +
-                ", beanName='" + beanName + '\'' + '\n' +
-                ", messageSource=" + messageSource + '\n' +
-                ", applicationEventPublisher=" + applicationEventPublisher + '\n' +
-                ", embeddedValueResolver=" + embeddedValueResolver + '\n' +
-                ", id=" + id +
+                "applicationContext=" + applicationContext + '\n' +
+                "environment=" + environment + '\n' +
+                "resourceLoader=" + resourceLoader + '\n' +
+                "beanClassLoader=" + beanClassLoader + '\n' +
+                "beanName='" + beanName + '\'' + '\n' +
+                "messageSource=" + messageSource + '\n' +
+                "applicationEventPublisher=" + applicationEventPublisher + '\n' +
+                "embeddedValueResolver=" + embeddedValueResolver + '\n' +
+                "id=" + id +
                 '}';
     }
 

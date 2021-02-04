@@ -55,6 +55,4 @@ public class Test {
 	private static void exec(Runnable r) {
 		new Thread(r).start();
 	}
-
 }
-
