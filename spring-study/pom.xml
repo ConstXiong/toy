@@ -23,6 +23,7 @@
 		<module>015-spring-inner-bean</module>
 		<module>016-spring-bean-exception</module>
 		<module>017-spring-interface-callback-inject</module>
+		<module>018-spring-resolve-dependency</module>
 	</modules>
 	
 	<properties>  
