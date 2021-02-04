@@ -24,6 +24,7 @@
 		<module>016-spring-bean-exception</module>
 		<module>017-spring-interface-callback-inject</module>
 		<module>018-spring-resolve-dependency</module>
+		<module>019-spring-inject-by-annotation</module>
 	</modules>
 	
 	<properties>  
