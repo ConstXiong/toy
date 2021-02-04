@@ -13,8 +13,7 @@
     </bean>
     
     <alias name="user1" alias="user5"/>
-    
-    
+
     <context:component-scan base-package="constxiong"/>
 
 </beans>

@@ -43,7 +43,7 @@ public class Test {
 		 * 详细的 Bean 命名规则，见 DefaultBeanNameGenerator、AnnotationBeanNameGenerator 两个类的 generateBeanName 方法
 		 * DefaultBeanNameGenerator 涉及了 parent Bean - $child 的拼接；Factory Bean - $created 的拼接；相同类进行编号 - #0... 等操作
 		 * AnnotationBeanNameGenerator 涉及了 获取注解指定的 name；去除包路径；类名首字母小写 的逻辑
-		 * 往深了还 bean name 覆盖问题
+		 * 往深了还有 bean name 覆盖问题
 		 */
 
 		// <context:component-scan base-package="constxiong"/> 可以添加 name-generator="constxiong.CustomBeanNameGenerator" 属性指定自定义 bean name 生成器
