@@ -16,7 +16,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Test {
 	
 	public static void main(String[] args) {
-//		lookup();//依赖查找
+		System.out.println("依赖查找");
+		lookup();//依赖查找
+		System.out.println();
+		System.out.println("依赖注入");
 		inject();//依赖注入
 	}
 

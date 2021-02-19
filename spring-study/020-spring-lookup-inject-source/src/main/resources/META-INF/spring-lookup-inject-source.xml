@@ -9,8 +9,8 @@
     
     <bean name="user" class="constxiong.User"/>
     
-     <context:component-scan base-package="constxiong"/>
+    <context:component-scan base-package="constxiong"/>
      
-     <context:property-placeholder location="classpath:META-INF/config.properties" />  
+    <context:property-placeholder location="classpath:META-INF/config.properties" />  
     
 </beans>
