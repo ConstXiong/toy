@@ -25,6 +25,7 @@
 		<module>017-spring-interface-callback-inject</module>
 		<module>018-spring-resolve-dependency</module>
 		<module>019-spring-inject-by-annotation</module>
+		<module>020-spring-lookup-inject-source</module>
 	</modules>
 	
 	<properties>  
