@@ -26,6 +26,7 @@
 		<module>018-spring-resolve-dependency</module>
 		<module>019-spring-inject-by-annotation</module>
 		<module>020-spring-lookup-inject-source</module>
+		<module>021-jar-tomcat-plugin</module>
 	</modules>
 	
 	<properties>  
