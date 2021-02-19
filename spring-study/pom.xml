@@ -27,6 +27,8 @@
 		<module>019-spring-inject-by-annotation</module>
 		<module>020-spring-lookup-inject-source</module>
 		<module>021-jar-tomcat-plugin</module>
+		<module>022-spring-bean-scope</module>
+		<module>023-spring-bean-custom-scope</module>
 	</modules>
 	
 	<properties>  
