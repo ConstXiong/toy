@@ -12,6 +12,11 @@ import org.springframework.core.io.support.EncodedResource;
 /**
  * 测试 spring bean definition 元信息解析
  * 
+ * 注册：
+ * PropertiesBeanDefinitionReader#registerBeanDefinitions
+ * XmlBeanDefinitionReader#registerBeanDefinitions
+ * AnnotatedBeanDefinitionReader#register...
+ * 
  * @author ConstXiong
  * @date 2021年3月3日 下午3:41:15
  */
