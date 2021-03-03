@@ -32,7 +32,8 @@
 		<module>024-spring-bean-lifecycle-bd-meta</module>
 		<module>025-spring-bean-lifecycle-bd-parse</module>
 		<module>026-spring-bean-lifecycle-bd-merge</module>
-		<module>027-spring-bean-lifecycle-classloader</module>		
+		<module>027-spring-bean-lifecycle-classloader</module>
+		<module>028-spring-bean-lifecycle-instantiation</module>
 	</modules>
 	
 	<properties>  

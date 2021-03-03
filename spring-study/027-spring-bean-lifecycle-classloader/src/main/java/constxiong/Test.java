@@ -1,14 +1,11 @@
 package constxiong;
 
-import java.security.AccessController;
-
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.util.ClassUtils;
 
 
 /**
- * 测试 spring bean class load
+ * 测试 spring bean Class 加载 
  * 
  * @author ConstXiong
  * @date 2021年3月3日 下午3:41:15
