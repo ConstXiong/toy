@@ -29,6 +29,7 @@
 		<module>021-jar-tomcat-plugin</module>
 		<module>022-spring-bean-scope</module>
 		<module>023-spring-bean-custom-scope</module>
+		<module>024-spring-bean-lifecycle-bd-meta</module>
 	</modules>
 	
 	<properties>  
