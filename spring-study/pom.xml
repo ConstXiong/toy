@@ -30,6 +30,7 @@
 		<module>022-spring-bean-scope</module>
 		<module>023-spring-bean-custom-scope</module>
 		<module>024-spring-bean-lifecycle-bd-meta</module>
+		<module>025-spring-bean-lifecycle-bd-parse</module>
 	</modules>
 	
 	<properties>  
