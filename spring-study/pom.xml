@@ -34,6 +34,7 @@
 		<module>026-spring-bean-lifecycle-bd-merge</module>
 		<module>027-spring-bean-lifecycle-classloader</module>
 		<module>028-spring-bean-lifecycle-instantiation</module>
+		<module>029-spring-bean-lifecycle-aware-callback</module>
 	</modules>
 	
 	<properties>  
