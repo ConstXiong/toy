@@ -13,6 +13,11 @@ import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
  * 5、处理 spring xml namespace，配置对应的节点
  * 6、获取对应的 bean
  * 
+ * 触发：AbstractApplicationContext#obtainFreshBeanFactory
+ *       AbstractXmlApplicationContext#loadBeanDefinitions
+ *     XmlBeanDefinitionReader#doLoadBeanDefinitions
+ *       BeanDefinitionParserDelegate#parseCustomElement
+ * 
  * @author ConstXiong
  * @date 2021年3月4日 下午3:41:15
  */
