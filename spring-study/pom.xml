@@ -41,6 +41,7 @@
 		<module>033-spring-bean-property-source</module>
 		<module>034-spring-bean-conditional</module>
 		<module>035-spring-extensible-xml-authoring</module>
+		<module>036-spring-property-source-yaml</module>
 	</modules>
 	
 	<properties>  
