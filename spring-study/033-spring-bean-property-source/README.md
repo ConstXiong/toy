@@ -1,0 +1,1 @@
+# Spring bean property source
