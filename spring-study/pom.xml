@@ -39,6 +39,7 @@
 		<module>031-spring-bean-lifecycle-destroy</module>
 		<module>032-spring-bean-profile</module>
 		<module>033-spring-bean-property-source</module>
+		<module>034-spring-bean-conditional</module>
 	</modules>
 	
 	<properties>  
