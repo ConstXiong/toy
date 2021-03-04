@@ -40,6 +40,7 @@
 		<module>032-spring-bean-profile</module>
 		<module>033-spring-bean-property-source</module>
 		<module>034-spring-bean-conditional</module>
+		<module>035-spring-extensible-xml-authoring</module>
 	</modules>
 	
 	<properties>  
