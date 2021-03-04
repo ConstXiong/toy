@@ -4,6 +4,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * 测试 spring yaml 文件作为 PropertySource
+ * org.springframework.beans.factory.config.YamlProcessor
+ *   org.springframework.beans.factory.config.YamlMapFactoryBean
+ *   org.springframework.beans.factory.config.YamlPropertiesFactoryBean
  * 
  * @author ConstXiong
  * @date 2021年3月4日 下午3:41:15
