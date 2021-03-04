@@ -37,6 +37,7 @@
 		<module>029-spring-bean-lifecycle-aware-callback</module>
 		<module>030-spring-bean-lifecycle-initialization</module>
 		<module>031-spring-bean-lifecycle-destroy</module>
+		<module>032-spring-bean-profile</module>
 	</modules>
 	
 	<properties>  
