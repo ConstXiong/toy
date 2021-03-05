@@ -14,7 +14,7 @@ import org.apache.commons.io.IOUtils;
 public class Test {
 
 	public static void main(String[] args) throws IOException {
-		URL url = new URL("constxiong:///META-INF/a.txt");
+		URL url = new URL("xxx:///META-INF/a.txt");
 		InputStream is = url.openStream();
 		System.out.println(IOUtils.toString(is, "utf-8"));
 		is.close();
