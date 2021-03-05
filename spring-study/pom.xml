@@ -44,6 +44,7 @@
 		<module>036-spring-property-source-yaml</module>
 		<module>037-spring-url-handler</module>
 		<module>038-spring-resource-inject</module>
+		<module>039-spring-resourceloader-inject</module>
 	</modules>
 	
 	<properties>  
