@@ -13,6 +13,27 @@ import org.springframework.core.io.Resource;
 /**
  * 测试 resource 注入
  * 
+ * 输入流          org.springframework.core.io.InputStreamSource
+ * 只读资源      org.springframework.core.io.Resource
+ * 可写资源      org.springframework.core.io.WritableResource
+ * 编码资源      org.springframework.core.io.support.EncodedResource
+ * 上下文资源  org.springframework.core.io.ContextResource
+ * 
+ * Bean 定义                               org.springframework.beans.factory.support.BeanDefinitionResource
+ * 数组                                              org.springframework.core.io.ByteArrayResource
+ * 类路径(classpath:/) org.springframework.core.io.ClassPathResource
+ * 文件系统(file:/)     org.springframework.core.io.FileSystemResource
+ * URL               org.springframework.core.io.UrlResource
+ * ServletContext    org.springframework.web.context.support.ServletContextResource
+ *
+ * 可写资源接口
+ * org.springframework.core.io.WritableResource
+ *   org.springframework.core.io.FileSystemResource
+ *   org.springframework.core.io.FileUrlResource（@since 5.0.2）
+ *   org.springframework.core.io.PathResource（@since 4.0 & @Deprecated）
+ * 编码资源接口
+ * org.springframework.core.io.support.EncodedResource
+ * 
  * @author ConstXiong
  */
 public class Test {

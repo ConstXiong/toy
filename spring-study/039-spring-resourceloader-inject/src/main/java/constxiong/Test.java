@@ -13,6 +13,13 @@ import org.springframework.core.io.ResourceLoader;
 /**
  * 测试 resource loader 注入
  * 
+ * Resource 加载器
+ *   org.springframework.core.io.ResourceLoader
+ *   org.springframework.core.io.DefaultResourceLoader
+ *     org.springframework.core.io.FileSystemResourceLoader
+ *     org.springframework.core.io.ClassRelativeResourceLoader
+ *     org.springframework.context.support.AbstractApplicationContext
+ * 
  * @author ConstXiong
  */
 public class Test implements ResourceLoaderAware {
