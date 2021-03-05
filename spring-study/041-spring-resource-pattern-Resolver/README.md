@@ -1,0 +1,1 @@
+# spring resource resource pattern

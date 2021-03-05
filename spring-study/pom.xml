@@ -45,6 +45,8 @@
 		<module>037-spring-url-handler</module>
 		<module>038-spring-resource-inject</module>
 		<module>039-spring-resourceloader-inject</module>
+		<module>040-spring-filesystem-resource</module>
+		<module>041-spring-resource-pattern-Resolver</module>
 	</modules>
 	
 	<properties>  
