@@ -46,7 +46,10 @@
 		<module>038-spring-resource-inject</module>
 		<module>039-spring-resourceloader-inject</module>
 		<module>040-spring-filesystem-resource</module>
-		<module>041-spring-resource-pattern-Resolver</module>
+		<module>041-spring-resource-pattern-resolver</module>
+		<module>042-java-i18n</module>
+		<module>043-spring-messagesource</module>
+		<module>044-auto-update-message-resource</module>
 	</modules>
 	
 	<properties>  
