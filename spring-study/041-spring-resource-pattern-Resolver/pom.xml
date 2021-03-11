@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 	
-    <artifactId>041-spring-resource-pattern-Resolver</artifactId>
+    <artifactId>041-spring-resource-pattern-resolver</artifactId>
 
     <properties>
         <spring-version>5.2.2.RELEASE</spring-version>
@@ -19,11 +19,6 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${spring-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.6</version>
         </dependency>
     </dependencies>
 
