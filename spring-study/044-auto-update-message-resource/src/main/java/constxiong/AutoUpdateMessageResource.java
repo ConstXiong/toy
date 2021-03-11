@@ -118,6 +118,9 @@ public class AutoUpdateMessageResource extends AbstractMessageSource {
 		return null;
 	}
 
+	/**
+	 * 停止监听文件改动
+	 */
 	public void stopListen(long delay) {
 		new Thread(() -> {
 			try {

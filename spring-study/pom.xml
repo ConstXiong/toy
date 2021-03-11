@@ -50,6 +50,9 @@
 		<module>042-java-i18n</module>
 		<module>043-spring-messagesource</module>
 		<module>044-auto-update-message-resource</module>
+		<module>045-java-beans</module>
+		<module>046-spring-validator</module>
+		<module>047-spring-bean-validator</module>
 	</modules>
 	
 	<properties>  
