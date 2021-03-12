@@ -53,6 +53,7 @@
 		<module>045-java-beans</module>
 		<module>046-spring-validator</module>
 		<module>047-spring-bean-validator</module>
+		<module>048-spring-data-binding</module>		
 	</modules>
 	
 	<properties>  
