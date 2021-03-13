@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd
+                           ">
+   
+   <!-- PropertyEditor(String -> User.property) -->
+   <bean class="constxiong.CustomPropertyEditorRegistrar"/>
+   
+   <!-- Converter(User.property -> String) -->
+   <bean id="customConverter" class="constxiong.CustomPropertyConverter"/>
+   
+   <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+   		<property name="converters">
+   			<ref bean="customConverter"/>
+   		</property>
+   </bean>
+   
+   <!-- 工具生成 properties -->
+    <util:properties id="innerProperty">
+    	<prop key="id">1</prop>
+    	<prop key="name">constxiong</prop>
+    </util:properties>
+
+	<bean id="user" class="constxiong.User">
+		<property name="property">
+			<value>
+				id = 1
+				name = constxiong
+			</value>
+		</property>
+		<property name="propertyText" ref="innerProperty"></property>
+	</bean>
+	    
+</beans>
