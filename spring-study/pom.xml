@@ -54,7 +54,8 @@
 		<module>046-spring-validator</module>
 		<module>047-spring-bean-validator</module>
 		<module>048-spring-data-binding</module>		
-		<module>049-spring-property-editor</module>		
+		<module>049-spring-property-editor</module>
+		<module>050-generic-api</module>
 	</modules>
 	
 	<properties>  
