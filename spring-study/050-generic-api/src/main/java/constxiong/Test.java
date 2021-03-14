@@ -61,9 +61,9 @@ public class Test {
 	private static void getCollectionGenericType() {
 		List<String> list = new ArrayList<String>();
 		StringList stringList = new StringList();
-		//4.x
+		//5.x 作废
 //		GenericCollectionTypeResolver.getCollectionType(list.getClass());
-		//5.x
+		
 		ResolvableType resolvableType = ResolvableType.forClass(list.getClass());
 		System.out.println(resolvableType);
 		System.out.println(resolvableType.getSuperType());
