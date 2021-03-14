@@ -64,6 +64,11 @@ public class Test {
 		//[2.0, 4.3]
 //		GenericCollectionTypeResolver.getCollectionType(list.getClass());
 		
+		//[4.0,)  GenericTypeResolver 和 GenericCollectionTypeResolver 替代者
+		//工厂方法:for* 方法
+		//转换方法:as* 方法
+		//处理方法:resolve* 方法
+		//ResolvableType 的局限性：无法处理泛型擦写;无法处理非具体化的 ParameterizedType
 		ResolvableType resolvableType = ResolvableType.forClass(list.getClass());
 		System.out.println(resolvableType);
 		System.out.println(resolvableType.getSuperType());
